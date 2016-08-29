@@ -2,14 +2,21 @@ Instructions
 Write a C++ program that creates a linked list of Country data. Each entry in the list is to have a country name such as "United States", and its gold, silver, and bronze medal counts (three integers), and a pointer to the next country data. Then create a pointer (“head”) that points to the first element in the linked list (initially NULL). Also, you need to create the following methods in the LinkedList class (within LinkedList.h file):
  
  
-bool LinkedList::addCountry(string countryName, int gold, int silver, int bronze) 
--          This method attempts to add a new country data into the linked list using the parameter values - country name, the number of gold medals, the number of silver medals, and the number of bronze medals. It needs to create an object/data of the struct Country and add it to the linked in a correct location. Each country should be added using their name in the alphabetical order. If there is no memory left to create a new object, the method should return false. The method should return true otherwise (the new country information was successfully added). 
+bool LinkedList::addCountry(string countryName, int gold, int silver, int bronze)
+
+This method attempts to add a new country data into the linked list using the parameter values - country name, the number of gold medals, the number of silver medals, and the number of bronze medals. It needs to create an object/data of the struct Country and add it to the linked in a correct location. Each country should be added using their name in the alphabetical order. If there is no memory left to create a new object, the method should return false. The method should return true otherwise (the new country information was successfully added). 
+
 bool LinkedList::removeCountry(string countryName) 
--          This method attempts to remove the country with the parameter country name value and should return true if it can find and remove the country information. It should return false otherwise (the country with the name does not exists in the linked list). 
+
+This method attempts to remove the country with the parameter country name value and should return true if it can find and remove the country information. It should return false otherwise (the country with the name does not exists in the linked list). 
+
 bool LinkedList::changeMedalCount(string countryName, string medal, int count) 
--          This method attempts to change the country with the parameter country name value with the parameter medal count and should return true if it can find and update the country information, by changing the corresponding medal count. The string parameter "medal" will be one of "gold", "silver", and "bronze"." It should return false otherwise (the country with the name does not exists in the linked list). 
+
+This method attempts to change the country with the parameter country name value with the parameter medal count and should return true if it can find and update the country information, by changing the corresponding medal count. The string parameter "medal" will be one of "gold", "silver", and "bronze"." It should return false otherwise (the country with the name does not exists in the linked list). 
+
 void LinkedList::printList( )
--           It prints all entries in the linked list in the following format (print "The list is empty\n" if the linked list is empty):
+
+It prints all entries in the linked list in the following format (print "The list is empty\n" if the linked list is empty):
 Country name: Hungary, Gold: 2, Silver: 3, Bronze: 0 
 Country name: Italy, Gold: 2, Silver: 5, Bronze: 4 
 Country name: South Korea, Gold: 3, Silver: 4, Bronze: 3 
@@ -18,9 +25,9 @@ Country name: United States, Gold: 3, Silver: 5, Bronze: 6
 Note that they are added using their country names in alphabetical order. 
  
 LinkedList::~LinkedList( ) 
-	- This is a destructor of the LinkedList class. It should remove all elements in the linked list and perform garbage collection (free their memory). At the end, it should print: "The number of deleted countries is: XXX\n" where XXX is the number of deleted countries in the linked list. 
- 
- 
+
+This is a destructor of the LinkedList class. It should remove all elements in the linked list and perform garbage collection (free their memory). At the end, it should print: "The number of deleted countries is: XXX\n" where XXX is the number of deleted countries in the linked list. 
+
 int main()
 	- The main function should start by displaying this menu in this format:
  
